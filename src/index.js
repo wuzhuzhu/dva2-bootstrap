@@ -25,7 +25,7 @@ const app = dva({
 moment.locale('zh-cn'); // moment设置中文
 
 // 3. Model
-// app.model(require('./models/example'));
+app.model(require('./models/example'));
 
 // 4. Router
 app.router(require('./router'));

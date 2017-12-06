@@ -10,16 +10,16 @@
   },
   "betterScripts": {
     "start": {
-      "command": "roadhog server"
+      "command": "cp src/index.html.dev src/index.html && roadhog server"
     },
     "build": {
-      "command": "roadhog build",
+      "command": "cp src/index.html.ssr src/index.html && roadhog build",
       "env": {
         "NODE_ENV": "production"
       }
     },
     "build:dll": {
-      "command": "roadhog buildDll",
+      "command": "roadhog buildDll && cp node_modules/roadhog-dlls/roadhog.dll.js dist/",
       "env": {
         "NODE_ENV": "development"
       }
@@ -29,6 +29,8 @@
     "install-node": "6.11.1"
   },
   "dependencies": {
+    "autoprefixer": "^7.1.2",
+    "babel-core": "^6.20.0",
     "adaptive.js": "^0.0.2",
     "antd-mobile": "^2.0.3",
     "babel-runtime": "^6.9.2",

@@ -16,7 +16,7 @@ function Routers({ history, app }) {
   const routes = [
     {
       path: '/game/portal',
-      models: () => [import('./models/example.js')],
+      // models: () => [import('./models/example.js')],
       component: () => import('./routes/IndexPage.js'),
     },
     {
