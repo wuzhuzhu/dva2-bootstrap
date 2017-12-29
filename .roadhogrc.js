@@ -16,6 +16,7 @@ export default {
           "style": true
         }
       ],
+      ["import", { "libraryName": "antd", "style": "css" }],
     ],
     development: {
       "extraBabelPlugins": [

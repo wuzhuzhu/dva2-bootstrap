@@ -1,7 +1,7 @@
 // import * as usersService from '../../../services/users';
 // import Immutable from 'seamless-immutable'
 import key from 'keymaster';
-import AV from 'leancloud-storage'
+
 
 export default {
   namespace: 'event',
@@ -24,21 +24,7 @@ export default {
     },
   },
   effects: {
-    * fetchAsqList(action, { call, select, put }) {
-      try {
-        const asqQuery = new AV.Query('Asq')
-        const asqs = yield asqQuery.find();
-        // const { data: gameTypes } = yield call(mockServices.getGameTypes);
-        yield put({
-          type: 'saveAsqs',
-          payload: {
-            asqs,
-          },
-        })
-      } catch (error) {
-        console.error(error);
-      }
-    },
+
   },
   subscriptions: {
   },
